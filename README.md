@@ -1,2 +1,2 @@
-﻿# a project to test designer patterns
+﻿# a project to test design patterns
  

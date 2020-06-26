@@ -1,0 +1,7 @@
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\StrategyConsole\StrategyConsole\bin\Debug\StrategyConsole.exe.config
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\StrategyConsole\StrategyConsole\bin\Debug\StrategyConsole.exe
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\StrategyConsole\StrategyConsole\bin\Debug\StrategyConsole.pdb
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\StrategyConsole\StrategyConsole\obj\Debug\StrategyConsole.csprojAssemblyReference.cache
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\StrategyConsole\StrategyConsole\obj\Debug\StrategyConsole.csproj.CoreCompileInputs.cache
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\StrategyConsole\StrategyConsole\obj\Debug\StrategyConsole.exe
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\StrategyConsole\StrategyConsole\obj\Debug\StrategyConsole.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StrategyConsole.Investimentos;
+using System;
 
 namespace StrategyConsole
 {
@@ -8,6 +9,12 @@ namespace StrategyConsole
         {
             Imposto iss = new ISS();
             Imposto icms = new ICMS();
+            Imposto iccc = new ICCC();
+
+            Investimento conversador = new Conservador();
+            Investimento moderado = new Moderado();
+            Investimento arrojado = new Arrojado();
+
             Orcamento orcamento = new Orcamento(500.0);
 
             // Calculando o ISS
@@ -15,6 +22,19 @@ namespace StrategyConsole
 
             // Calculando o ICMS        
             CalculadorImposto.RealizaCalculo(orcamento, icms);
+
+            // Calculando o ISSS
+            CalculadorImposto.RealizaCalculo(orcamento, iccc);
+
+            // Calculando o ISS
+            CalculadorInvestimento.RealizaCalculo(orcamento, conversador);
+
+            // Calculando o ICMS        
+            CalculadorInvestimento.RealizaCalculo(orcamento, moderado);
+
+            // Calculando o ISSS
+            CalculadorInvestimento.RealizaCalculo(orcamento, arrojado);
+
 
             Console.ReadKey();
         }

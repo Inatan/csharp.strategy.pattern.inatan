@@ -4,6 +4,11 @@ namespace StrategyConsole.Impostos
 {
     public class IKCV : TemplateDeImpostosCondicional
     {
+        public IKCV(Imposto outroImposto) : base(outroImposto) { }
+
+        public IKCV() : base() { };
+
+
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {
             return orcamento.Valor > 500 && orcamento.Itens.Any(i => i.Valor >= 500);

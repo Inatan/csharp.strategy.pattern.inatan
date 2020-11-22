@@ -1,4 +1,5 @@
 ﻿using StrategyConsole.Nota;
+using StrategyConsole.Nota.Util;
 using System;
 using System.Collections.Generic;
 
@@ -59,7 +60,7 @@ namespace StrategyConsole
             //reforma.Finaliza();
 
 
-            // ex 6 - Builder
+            // ex 6 - Builder & Fluent Interface
             NotaFiscalBuilder builder = new NotaFiscalBuilder();
             builder
                 .ParaEmpresa("Caelum Ensino")
@@ -68,6 +69,10 @@ namespace StrategyConsole
                 .ComItem(new ItemDaNota("item 2", 200.0))
                 .NaDataAtual()
                 .ComObservacoes("uma obs qualquer");
+            // ex 7 - Observer
+            builder.AdicionaAcao(new EnviadorDeEmail());
+            builder.AdicionaAcao(new NotaFiscalDao());
+            builder.AdicionaAcao(new EnviadorDeSms());
 
             NotaFiscal nf = builder.Constroi();
            

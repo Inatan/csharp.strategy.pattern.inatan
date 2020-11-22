@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StrategyConsole.Nota.Util;
+using System;
 using System.Collections.Generic;
 
 namespace StrategyConsole.Nota
@@ -14,9 +15,26 @@ namespace StrategyConsole.Nota
         private double impostos;
         private IList<ItemDaNota> todosItens = new List<ItemDaNota>();
 
+        private IList<IAcaoAposGerarNota> todasAcoesASeremExecutadas = new List<IAcaoAposGerarNota>();
+
         public NotaFiscal Constroi()
         {
-            return new NotaFiscal(RazaoSocial, Cnpj,Data, valorTotal, impostos, todosItens, Observacoes);
+            NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj,Data, valorTotal, impostos, todosItens, Observacoes);
+
+            foreach (IAcaoAposGerarNota acao in todasAcoesASeremExecutadas)
+            {
+                acao.Executa(nf);
+            }
+            new EnviadorDeEmail().Executa(nf);
+            new NotaFiscalDao().Executa(nf);
+            new EnviadorDeSms().Executa(nf);
+
+            return nf;
+        }
+
+        public void AdicionaAcao(IAcaoAposGerarNota nocaAcao)
+        {
+            todasAcoesASeremExecutadas.Add(nocaAcao);
         }
 
         public NotaFiscalBuilder ParaEmpresa(String razaoSocial)

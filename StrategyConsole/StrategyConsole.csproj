@@ -58,6 +58,8 @@
     <Compile Include="Investimentos\Moderado.cs" />
     <Compile Include="Investimentos\Arrojado.cs" />
     <Compile Include="Infraestrutura\Item.cs" />
+    <Compile Include="NotaFiscal\ItemDaNota.cs" />
+    <Compile Include="NotaFiscal\NotaFiscal.cs" />
     <Compile Include="Orcamento.cs" />
     <Compile Include="Investimentos\Conservador.cs" />
     <Compile Include="Investimentos\Investimento.cs" />

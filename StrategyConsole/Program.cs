@@ -1,5 +1,6 @@
-﻿using StrategyConsole.Investimentos;
+﻿using StrategyConsole.Nota;
 using System;
+using System.Collections.Generic;
 
 namespace StrategyConsole
 {
@@ -7,6 +8,7 @@ namespace StrategyConsole
     {
         static void Main(string[] args)
         {
+            //ex 1 - strategy
             //Imposto iss = new ISS();
             //Imposto icms = new ICMS();
             //Imposto iccc = new ICCC();
@@ -35,7 +37,7 @@ namespace StrategyConsole
             //// Calculando o ISSS
             //CalculadorInvestimento.RealizaCalculo(orcamento, arrojado);
 
-            //ex 2
+            //ex 2 - Chain of Responsability
             //CalculadorDeDescontos calculador = new CalculadorDeDescontos();
 
             //Orcamento orcamento = new Orcamento(500);
@@ -44,18 +46,31 @@ namespace StrategyConsole
             //double desconto = calculador.Calcula(orcamento);
             //Console.WriteLine(desconto);
 
-            // ex 5
+            // ex 5 STATE
 
-            Orcamento reforma = new Orcamento(500);
-            Console.WriteLine(reforma.Valor);
+            //Orcamento reforma = new Orcamento(500);
+            //Console.WriteLine(reforma.Valor);
 
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
-            reforma.Aprova();
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
-            reforma.Finaliza();
+            //reforma.AplicaDescontoExtra();
+            //Console.WriteLine(reforma.Valor);
+            //reforma.Aprova();
+            //reforma.AplicaDescontoExtra();
+            //Console.WriteLine(reforma.Valor);
+            //reforma.Finaliza();
 
+
+            // ex 6 - Builder
+            NotaFiscalBuilder builder = new NotaFiscalBuilder();
+            builder
+                .ParaEmpresa("Caelum Ensino")
+                .ComCnpj("223.456/789/0001-12")
+                .ComItem(new ItemDaNota("item 1", 100.0))
+                .ComItem(new ItemDaNota("item 2", 200.0))
+                .NaDataAtual()
+                .ComObservacoes("uma obs qualquer");
+
+            NotaFiscal nf = builder.Constroi();
+           
             Console.ReadKey();
         }
     }

@@ -6,7 +6,7 @@ namespace StrategyConsole.Impostos
     {
         public IKCV(Imposto outroImposto) : base(outroImposto) { }
 
-        public IKCV() : base() { };
+        public IKCV() : base() { }
 
 
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)

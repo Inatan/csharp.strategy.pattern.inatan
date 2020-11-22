@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StrategyConsole
+namespace StrategyConsole.Calculador
 {
     public static class CalculadorImposto
     {

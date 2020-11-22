@@ -1,4 +1,4 @@
-﻿namespace StrategyConsole
+﻿namespace StrategyConsole.Desconto
 {
     public class DescontoPorMaisDeQuinhetosReais : IDesconto
     {

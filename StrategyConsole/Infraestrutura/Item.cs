@@ -1,4 +1,4 @@
-﻿namespace StrategyConsole
+﻿namespace StrategyConsole.Infraestrutura
 {
     public class Item
     {

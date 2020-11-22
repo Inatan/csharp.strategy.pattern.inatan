@@ -1,4 +1,4 @@
-﻿namespace StrategyConsole
+﻿namespace StrategyConsole.Impostos
 {
     public abstract class TemplateDeImpostosCondicional : Imposto
     {

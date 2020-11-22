@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StrategyConsole
+namespace StrategyConsole.Desconto
 {
     public class SemDesconto : IDesconto
     {

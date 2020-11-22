@@ -36,13 +36,25 @@ namespace StrategyConsole
             //CalculadorInvestimento.RealizaCalculo(orcamento, arrojado);
 
             //ex 2
-            CalculadorDeDescontos calculador = new CalculadorDeDescontos();
+            //CalculadorDeDescontos calculador = new CalculadorDeDescontos();
 
-            Orcamento orcamento = new Orcamento(500);
-            orcamento.AdicionaItem(new Item("CANETA", 250));
-            orcamento.AdicionaItem(new Item("LAPIS", 250));
-            double desconto = calculador.Calcula(orcamento);
-            Console.WriteLine(desconto);
+            //Orcamento orcamento = new Orcamento(500);
+            //orcamento.AdicionaItem(new Item("CANETA", 250));
+            //orcamento.AdicionaItem(new Item("LAPIS", 250));
+            //double desconto = calculador.Calcula(orcamento);
+            //Console.WriteLine(desconto);
+
+            // ex 5
+
+            Orcamento reforma = new Orcamento(500);
+            Console.WriteLine(reforma.Valor);
+
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+            reforma.Aprova();
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+            reforma.Finaliza();
 
             Console.ReadKey();
         }

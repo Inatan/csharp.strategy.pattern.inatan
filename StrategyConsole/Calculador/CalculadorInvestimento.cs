@@ -1,7 +1,7 @@
 ﻿using StrategyConsole.Investimentos;
 using System;
 
-namespace StrategyConsole
+namespace StrategyConsole.Calculador
 {
     public static class CalculadorInvestimento
     {

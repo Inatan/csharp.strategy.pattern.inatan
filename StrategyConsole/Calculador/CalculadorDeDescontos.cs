@@ -1,4 +1,6 @@
-﻿namespace StrategyConsole
+﻿using StrategyConsole.Desconto;
+
+namespace StrategyConsole.Calculador
 {
     public class CalculadorDeDescontos
     {

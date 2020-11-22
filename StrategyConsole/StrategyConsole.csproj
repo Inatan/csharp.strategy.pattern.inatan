@@ -43,12 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculadorDeDescontos.cs" />
-    <Compile Include="CalculadorInvestimento.cs" />
-    <Compile Include="CalculadorImposto.cs" />
-    <Compile Include="DescontoPorCincoItens.cs" />
-    <Compile Include="DescontoPorMaisDe500.cs" />
-    <Compile Include="IDesconto.cs" />
+    <Compile Include="Calculador\CalculadorDeDescontos.cs" />
+    <Compile Include="Calculador\CalculadorInvestimento.cs" />
+    <Compile Include="Calculador\CalculadorImposto.cs" />
+    <Compile Include="Desconto\DescontoPorCincoItens.cs" />
+    <Compile Include="Desconto\DescontoPorMaisDeQuinhetosReais.cs" />
+    <Compile Include="Desconto\IDesconto.cs" />
     <Compile Include="Impostos\ICCC.cs" />
     <Compile Include="Impostos\ICMS.cs" />
     <Compile Include="Impostos\ICPP.cs" />
@@ -57,14 +57,19 @@
     <Compile Include="Impostos\ISS.cs" />
     <Compile Include="Investimentos\Moderado.cs" />
     <Compile Include="Investimentos\Arrojado.cs" />
-    <Compile Include="Item.cs" />
+    <Compile Include="Infraestrutura\Item.cs" />
     <Compile Include="Orcamento.cs" />
     <Compile Include="Investimentos\Conservador.cs" />
     <Compile Include="Investimentos\Investimento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SemDesconto.cs" />
-    <Compile Include="TemplateDeImpostosCondicional.cs" />
+    <Compile Include="Desconto\SemDesconto.cs" />
+    <Compile Include="Status\Aprovacao.cs" />
+    <Compile Include="Status\EmAprovacao.cs" />
+    <Compile Include="Status\Finalizado.cs" />
+    <Compile Include="Status\IEstadoOrcamento.cs" />
+    <Compile Include="Impostos\TemplateDeImpostosCondicional.cs" />
+    <Compile Include="Status\Reprovado.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
